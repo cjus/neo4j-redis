@@ -1,6 +1,6 @@
 {
   "name": "@cjus/neo4j",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Neo4j Adapter",
   "author": {
     "name": "Carlos Justiniano",
@@ -32,5 +32,14 @@
   },
   "bin": {
     "neo4j": "index.js"
-  }
+  },
+	"repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjus/neo4j.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cjus/neo4j/issues"
+  },
+  "homepage": "https://github.com/cjus/neo4j#readme"
 }
