@@ -1,0 +1,36 @@
+{
+  "name": "@cjus/neo4j",
+  "version": "1.1.2",
+  "description": "Neo4j Adapter",
+  "author": {
+    "name": "Carlos Justiniano",
+    "email": "carlos.justiniano@gmail.com",
+    "url": "http://cjus.me"
+  },
+  "keywords": [
+    "neo4j",
+    "cypher"
+  ],
+  "scripts": {
+    "test": "mocha specs --reporter spec"
+  },
+  "engines": {
+    "node": ">=6.2.1"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "3.4.6",
+    "fwsp-cacher": "1.0.2",
+    "fwsp-server-response": "2.2.3",
+    "node-fetch": "1.6.3"
+  },
+  "devDependencies": {
+    "chai": "3.5.0",
+    "eslint": "3.11.1",
+    "mocha": "3.2.0",
+    "sinon": "1.17.6"
+  },
+  "bin": {
+    "neo4j": "index.js"
+  }
+}
