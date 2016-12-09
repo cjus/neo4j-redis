@@ -1,8 +1,8 @@
 {
-  "name": "@cjus/neo4j",
-  "version": "1.2.0",
+  "name": "neo4j-redis",
+  "version": "1.0.0",
   "private": false,
-  "description": "Neo4j Adapter",
+  "description": "Neo4j-redis Adapter",
   "author": {
     "name": "Carlos Justiniano",
     "email": "carlos.justiniano@gmail.com",
@@ -36,11 +36,12 @@
   },
 	"repository": {
     "type": "git",
-    "url": "git+https://github.com/cjus/neo4j.git"
+    "url": "git+https://github.com/cjus/neo4j-redis.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cjus/neo4j/issues"
+    "url": "https://github.com/cjus/neo4j-redis/issues"
   },
-  "homepage": "https://github.com/cjus/neo4j#readme"
+  "homepage": "https://github.com/cjus/neo4j-redis#readme"
 }
+

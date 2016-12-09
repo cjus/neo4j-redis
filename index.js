@@ -1,6 +1,6 @@
 /**
  * @name Neo4j
- * @description Promised based Neo4j database adapter for use with Cypher.
+ * @description Promised based Neo4j-redis database adapter for use with Cypher.
  * @author Carlos Justiniano
  */
 'use strict';

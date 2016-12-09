@@ -4,7 +4,7 @@ Neo4j, a promised-based Neo4j transactions adapter which optionally supports cac
 ## Usage
 ```javascript
 const config = require('./properties').value;
-const Neo4j = require('@cjus/neo4j');
+const Neo4j = require('neo4j-redis');
 let neo4j = new Neo4j();
 neo4j.initGraphDB('http://127.0.0.1:7474', 'neo4j', 'password');
 ```
