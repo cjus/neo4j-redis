@@ -1,4 +1,4 @@
-# neo4j
+# Neo4j adapter with Redis caching [![npm version](https://badge.fury.io/js/neo4j-redis.svg)](https://badge.fury.io/js/neo4j-redis)
 Neo4j, a promised-based Neo4j transactions adapter which optionally supports caching using Redis.
 
 ## Usage
