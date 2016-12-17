@@ -1,4 +1,6 @@
-# Neo4j-redis [![npm version](https://badge.fury.io/js/neo4j-redis.svg)](https://badge.fury.io/js/neo4j-redis) <span class="badge-npmdownloads"><a href="https://npmjs.org/package/neo4j-redis" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/neo4j-redis.svg" alt="NPM downloads" /></a></span> [![npm](https://img.shields.io/npm/l/neo4j-redis.svg)]()
+# Neo4j-redis 
+
+[![npm version](https://badge.fury.io/js/neo4j-redis.svg)](https://badge.fury.io/js/neo4j-redis) <span class="badge-npmdownloads"><a href="https://npmjs.org/package/neo4j-redis" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/neo4j-redis.svg" alt="NPM downloads" /></a></span> [![npm](https://img.shields.io/npm/l/neo4j-redis.svg)]()
 
 Neo4j, a promised-based Neo4j transactions adapter which optionally supports caching using Redis.
 
