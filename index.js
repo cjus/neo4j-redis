@@ -102,7 +102,6 @@ class Transaction {
           if (this.cachable) {
             if (!this.cacher) {
               throw new Error('Attempt to use cacher without calling initCacheDB()');
-              return;
             }
             cacher.setCachePrefix(this.cachePrefix);
             cacher.setData(this.cacheKey, result, this.cacheDuration);
@@ -128,7 +127,6 @@ class Transaction {
   addQuery(queryBuilder, params) {
     if (this.used) {
       throw new Error(`Can't reuse transaction`);
-      return this;
     }
     this.statements.push({
       statement: queryBuilder.toString(),
@@ -148,7 +146,6 @@ class Transaction {
   cacheable(prefix, key, duration) {
     if (!this.cacher) {
       throw new Error('Attempt to use cacher without calling initCacheDB()');
-      return;
     }
     this.cached = true;
     this.cachePrefix = prefix;
@@ -267,6 +264,10 @@ class Neo4j {
         ret.push(`${k}:"${obj[k]}"`);
       } else if (typeof(obj[k]) === 'number') {
         ret.push(`${k}:${obj[k]}`);
+      } else if (typeof(obj[k]) === 'boolean') {
+        ret.push(`${k}:${obj[k]}`);
+      } else if (typeof(obj[k]) === 'array') {
+        ret.push(`${k}:[]`);
       } else {
         throw new Error('property type not supported');
       }
