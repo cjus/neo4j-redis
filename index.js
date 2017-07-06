@@ -31,7 +31,10 @@ class QueryBuilder {
   * @return {string} value - full query as a string
   */
   toString() {
-    return this.q.join(' ').replace(/(?:\r\n|\r|\n)/g,'').trim();
+    return this.q.join(' ').
+      replace(/\s\s+/g, ' ').
+      replace(/(?:\r\n|\r|\n|\t)/g,'').
+      trim();
   }
 }
 
