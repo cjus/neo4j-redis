@@ -293,6 +293,26 @@ class Neo4j {
     });
     return ret.join(', ');
   }
+
+  /**
+  * @name toSets
+  * @summary Convert an object of properties to a group of set statements
+  * @param {string} v - query varible
+  * @param {string} objName - query param object name
+  * @param {object} obj - object which will be converted
+  * @note creates string in this format: "SET e.eid = {event}.eid"
+  *       query must pass param object named event in the example above
+  * @return {string} string of neo4j cypher compatible set statements
+  */
+  toSets(v, objName, obj) {
+    let ret = [];
+    let objKeys = Object.keys(obj);
+    ret.push('\n');
+    objKeys.forEach((k) => {
+      ret.push(`  SET ${v}.${k} = {${objName}}.${k}`)
+    });
+    return ret.join('\n');
+  }
 }
 
 module.exports = Neo4j;
