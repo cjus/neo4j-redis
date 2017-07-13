@@ -1,6 +1,6 @@
 {
   "name": "neo4j-redis",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": false,
   "description": "Neo4j-redis Adapter",
   "author": {

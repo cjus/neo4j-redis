@@ -1,4 +1,4 @@
-# Neo4j-redis 
+# Neo4j-redis
 
 [![npm version](https://badge.fury.io/js/neo4j-redis.svg)](https://badge.fury.io/js/neo4j-redis) <span class="badge-npmdownloads"><a href="https://npmjs.org/package/neo4j-redis" title="View this project on NPM"><img src="https://img.shields.io/npm/dm/neo4j-redis.svg" alt="NPM downloads" /></a></span> [![npm](https://img.shields.io/npm/l/neo4j-redis.svg)]()
 
@@ -25,6 +25,7 @@ This module contains a core exported class Neo4j. In turn it also creates `Trans
 | getSimpleData | Helper to extra simple data responses | Simple data is defined as a single return value.  A single object qualifies |
 | toProps | Convert an object of properties to a property query string | |
 | toNamedProps | Converts a named object to a cypher compatible key / value pair | |
+| toSets | Converts an object to a cypher compatible list of set statements | |
 
 #### Transaction API
 | Method | Description | Notes |
