@@ -19,9 +19,15 @@ class QueryBuilder {
   /**
   * @name add
   * @summary Adds a partial query statement.
-  * @param {string} partial - query fragment
+  * @param {string / array} partial - query fragment
   */
   add(partial) {
+    if (partial.constructor === Array) {
+      partial.forEach((element) => {
+        this.add(element);
+      });
+      return;
+    }
     this.q.push(partial);
   }
 
