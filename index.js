@@ -260,6 +260,21 @@ class Neo4j {
   }
 
   /**
+   * @name getSimpleListData
+   * @description Returns a list of simple data
+   * @param {object} result - result object
+   * @returns {object} ret - response data
+   */
+  getSimpleListData(result) {
+    var ret = null;
+    result = result[0];
+    if (!result || !result.data || result.data.length === 0) {
+      return ret;
+    }
+    return result.data.map((row) => row.row[0]);
+  }
+
+  /**
   * @name toProps
   * @summary Convert an object of properties to a property query string.
   * @param {object} obj - object which will be converted to string of key/values
