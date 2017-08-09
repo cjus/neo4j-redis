@@ -97,7 +97,11 @@ class Transaction {
       })
       .then((json) => {
         if (json.errors.length > 0) {
-          throw json.errors;
+          let errList = [];
+          json.errors.forEach((e) => {
+            errList.push(`${json.errors[0].code}: ${json.errors[0].message}`);
+          });
+          throw new Error(errList.join('\n'));
         } else {
           result = json.results;
           return fetch(json.commit, {
@@ -122,7 +126,9 @@ class Transaction {
           throw new Error('commit failed');
         }
       })
-      .catch(reject);
+      .catch((err) => {
+        reject(err);
+      });
     this.used = true;
   }
 
@@ -176,7 +182,6 @@ class Transaction {
             resolve(cachedData);
           })
           .catch((reason) => {
-            console.log('reason', reason);
             this._processTransaction(resolve, reject);
           });
       } else {
