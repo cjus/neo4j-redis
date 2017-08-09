@@ -314,9 +314,18 @@ class Neo4j {
   toNamedProps(name, obj) {
     let ret = [];
     let objKeys = Object.keys(obj);
-    objKeys.forEach((k) => {
-      ret.push(`${k}:{${name}}.${k}`);
-    });
+    let segs = name.split('.');
+    if (segs.length > 1) {
+      let name = segs.shift();
+      let remain = segs.join('.');
+      objKeys.forEach((k) => {
+        ret.push(`${k}:{${name}}.${remain}.${k}`);
+      });
+    } else {
+      objKeys.forEach((k) => {
+        ret.push(`${k}:{${name}}.${k}`);
+      });
+    }
     return ret.join(', ');
   }
 
